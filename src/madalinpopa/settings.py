@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = "ro"
+LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "Europe/Bucharest"
 
@@ -119,3 +119,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = BASE_DIR / "static"
+
+STATICFILES_DIRS = [
+    ("main", BASE_DIR / "assets/"),
+]
+
+TEMPLATES[0]["DIRS"] += [BASE_DIR / "templates/"]
+
+# Media
+
+MEDIA_ROOT = BASE_DIR / "media/"
+MEDIA_URL = "/media/"
