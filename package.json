@@ -1,0 +1,23 @@
+{
+  "name": "madalinpopa.com",
+  "version": "1.0.0",
+  "description": "Full Stack Developer - Lifelong learner",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass -o src/assets/css src/assets/sass -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppmadalin/madalinpopa.com.git"
+  },
+  "keywords": [
+    "personal",
+    "blog"
+  ],
+  "author": "Madalin Popa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ppmadalin/madalinpopa.com/issues"
+  },
+  "homepage": "https://github.com/ppmadalin/madalinpopa.com#readme"
+}

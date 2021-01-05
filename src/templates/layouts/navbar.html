@@ -1,0 +1,23 @@
+<nav id="navbar" class="navbar">
+
+  <!-- Navbar content -->
+  <div class="container">
+
+    <div class="navbar__content">
+
+      <!-- Navbar brand -->
+      <div class="navbar__brand">
+        <div class="navbar__brand-text">
+          <h1 class="navbar__logo"><a href="{% url 'blog:index' %}">Madalin Popa</a></h1>
+          <h4>Full Stack Developer - Lifelong learner</h4>
+        </div>
+      </div>
+
+      <!-- Navbar menu -->
+      <ul class="navbar__menu">
+        <li><a href="{% url 'blog:index' %}">Blog</a></li>
+        <li><a href="{% url 'blog:about' %}">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
