@@ -1,21 +1,30 @@
 <div class="blog-posts">
 
+    {% if tag %}
+        <h2 class="tag-title">Posts tagged with "{{ tag.name }}"</h2>
+    {% endif %}
+
     {% for post in posts %}
         <article class="post-entry">
             <h1 class="post-entry__title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+
             <div class="post-entry__content">
                 {{ post.body|truncatewords:50|linebreaks }}
                 <a href="{{ post.get_absolute_url }}" class="post-entry__read-more">Read More</a>
             </div>
             <div class="post-entry__footer">
-                <div class="post-entry__category">
-                    <h4>Category:</h4>
-                    <a href="#">post category</a>
-                </div>
+            {% if post.tags.all %}
+                <p class="post__tags">Tags:
+                    {% for tag in post.tags.all %}
+                        <a href="{% url 'blog:post_list_by_tag' tag.slug %}">{{ tag }}</a>
+                    {% endfor %}
+
+                </p>
+            {% endif %}
             </div>
         </article>
     {% endfor %}
-{{ page.number }}
+    {{ page.number }}
     <!-- Pagination -->
     {% include "layouts/pagination.html" with page=posts %}
 </div>

@@ -1,13 +1,19 @@
 from django.shortcuts import get_object_or_404, render
+from taggit.models import Tag
+
 from .models import Post
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
-def index(request):
+def index(request, tag_slug=None):
     """
     List of posts.
     """
     object_list = Post.published.all()
+    tag = None
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        object_list = object_list.filter(tags__in=[tag])
     paginator = Paginator(object_list, 3)
     page = request.GET.get('page')
     try:
@@ -18,7 +24,7 @@ def index(request):
     except EmptyPage:
         # If the page is out of range, go to last pae of results
         posts = paginator.page(paginator.num_pages)
-    return render(request, "blog/index.html", {'page': page, "posts": posts, })
+    return render(request, "blog/index.html", {'page': page, "posts": posts, 'tag': tag, })
 
 
 def about(request):

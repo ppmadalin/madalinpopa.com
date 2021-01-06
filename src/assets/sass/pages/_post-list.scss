@@ -2,27 +2,21 @@
     // border: 1px solid black;
     display: flex;
     flex-direction: column;
-  
+
     &:not(:last-of-type){
       margin-bottom: 2rem;
     }
-  
     &__content {
       // border: 1px solid black;
       display: inline;
       margin-top: 0.75rem;
       line-height: 1.5;
-  
+
       @include mobile {
         line-height: 1.4;
       }
     }
-  
-    &__reading-time{
-      font-size: 0.8em;
-      color: $gray;
-    }
-  
+
     &__footer {
       // border: 1px solid black;
       // border-bottom: 0.5px solid grey;
@@ -30,17 +24,7 @@
       justify-content: space-between;
       align-items: center;
     }
-  
-    &__category {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      a {
-        margin-left: 0.5rem;
-        color: $blue;
-      }
-    }
-  
+
     &__read-more {
       // border: 1px solid black;
       color: $blue;

@@ -97,3 +97,10 @@ blockquote {
       grid-template-columns: 1fr;
     }
   }
+
+  .tag-title {
+    background-color: $lightGray;
+    font-size: 1em;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }

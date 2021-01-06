@@ -1,6 +1,7 @@
 .post {
   &__content {
     margin-bottom: 5rem;
+    text-indent: 2rem;
   }
 
   &__date {
@@ -18,4 +19,12 @@
     display: block;
     margin: 0 auto;
   }
+  &__tags {
+    color: gray;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+   a:not(:last-of-type)::after {
+      content: ",";
+    }
 }
