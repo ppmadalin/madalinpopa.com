@@ -1,28 +1,21 @@
 .post {
-
-    // border: 1px solid black;
-  
-    &__title {
-      margin-bottom: 1rem;
-    }
-  
-    &__content {
-      // border: 1px solid black;
-      margin-bottom: 0.75rem;
-    }
-  
-    &__date {
-      font-size: 1em;
-      color: $gray;
-    }
-  
-    p {
-      margin: 1rem 0;
-    }
-  
-    img {
-      width: 50%;
-      display: block;
-      margin: 0 auto;
-    }
+  &__content {
+    margin-bottom: 5rem;
   }
+
+  &__date {
+    font-size: 0.8em;
+    color: $gray;
+
+  }
+
+  p {
+    margin: 1rem 0;
+  }
+
+  img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+}

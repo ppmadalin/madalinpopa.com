@@ -194,6 +194,13 @@ a {
   .page__title {
     margin-bottom: 1rem; }
 
+.pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end; }
+  .pagination .previous, .pagination .next {
+    margin: 0 0.5rem; }
+
 .post-entry {
   display: flex;
   flex-direction: column; }
@@ -224,14 +231,11 @@ a {
     color: #4183C4;
     display: inline; }
 
-.post__title {
-  margin-bottom: 1rem; }
-
 .post__content {
-  margin-bottom: 0.75rem; }
+  margin-bottom: 5rem; }
 
 .post__date {
-  font-size: 1em;
+  font-size: 0.8em;
   color: #666; }
 
 .post p {

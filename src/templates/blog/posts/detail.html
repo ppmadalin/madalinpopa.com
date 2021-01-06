@@ -1,4 +1,19 @@
 {% extends 'base.html' %}
+{% block title %}{{ post.title }}{% endblock title %}
 {% block content %}
-<h1>Detail</h1>
+    <article class="post">
+
+        <h1 class="post__title">{{ post.title }}</h1>
+
+        <div class="post__date">
+            Written on {{ post.publish }} by {{ post.author }}
+        </div>
+
+        <div class="post__content">
+            {{ post.body|linebreaks }}
+        </div>
+
+
+        {% include "includes/disqus.html" %}
+    </article>
 {% endblock content %}

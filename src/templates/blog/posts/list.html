@@ -1,4 +1,21 @@
-{% extends 'base.html' %}
-{% block content %}
-<h1>List This is a simple test</h1>
-{% endblock content %}
+<div class="blog-posts">
+
+    {% for post in posts %}
+        <article class="post-entry">
+            <h1 class="post-entry__title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+            <div class="post-entry__content">
+                {{ post.body|truncatewords:50|linebreaks }}
+                <a href="{{ post.get_absolute_url }}" class="post-entry__read-more">Read More</a>
+            </div>
+            <div class="post-entry__footer">
+                <div class="post-entry__category">
+                    <h4>Category:</h4>
+                    <a href="#">post category</a>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+{{ page.number }}
+    <!-- Pagination -->
+    {% include "layouts/pagination.html" with page=posts %}
+</div>

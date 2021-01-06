@@ -2,19 +2,8 @@
 
 {% block content %}
 
-<div class="blog-posts">
-  <article class="post-entry">
-    <h1 class="post-entry__title"><a href="#">Title</a></h1>
-    <div class="post-entry__content">
-      <a href="#" class="post-entry__read-more">Read More</a>
-    </div>
-    <div class="post-entry__footer">
-      <div class="post-entry__category">
-        <h4>Category:</h4>
-        <a href="#">post category</a>
-      </div>
-    </div>
-  </article>
-</div>
+    <!-- List of posts-->
+    {% include "blog/posts/list.html" %}
+
 
 {% endblock content %}
