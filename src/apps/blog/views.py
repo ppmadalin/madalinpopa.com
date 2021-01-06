@@ -1,6 +1,5 @@
-from django.shortcuts import get_object_or_404, render, get_list_or_404
+from django.shortcuts import get_object_or_404, render
 from .models import Post
-from .forms import CommentForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
@@ -48,15 +47,5 @@ def post_detail(request, year, month, day, post):
         publish__month=month,
         publish__day=day,
     )
-    comments = post.comments.filter(active=True)
-    new_comment = None
-    if request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            new_comment = comment_form.save(commit=False)
-            new_comment.post = post
-            new_comment.save()
-    else:
-        comment_form = CommentForm()
-    return render(request, "blog/posts/detail.html",
-                  {"post": post, 'comments': comments, 'new_comment': new_comment, 'comment_form': comment_form})
+
+    return render(request, "blog/posts/detail.html", {"post": post})
