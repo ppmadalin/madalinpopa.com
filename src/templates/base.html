@@ -1,49 +1,51 @@
+{% load blog_tags %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en-us">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name=”robots” content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="description" content="Full Stack Developer - Lifelong learner" />
-  <meta name="author" content="Madalin Popa">
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Full Stack Developer - Lifelong learner" />
-  <meta property="og:description" content="Full Stack Developer - Lifelong learner" />
-  <meta property="og:url" content="https://www.madalinpopa.com/" />
-  <meta property="og:site_name" content="Madalin Popa" />
-  <meta property="article:publisher" content="https://twiter.com/ppmadalin" />
-  <script src="https://kit.fontawesome.com/2234045cef.js" crossorigin="anonymous"></script>
-  <link rel="canonical" href="https://www.madalinpopa.com/" />
-  <link rel="shortcut icon" type="image/png" href="{% static 'main/favicon.ico' %}" />
-  <!-- Load CSS -->
-  {% block stylesheet %}
-  <link type="text/css" href="{% static 'main/css/main.css' %}" rel="stylesheet">
-  {% endblock stylesheet %}
-  <title>{% block title %}Full Stack Developer - Lifelong learner{% endblock %}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name=”robots” content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="description" content="Full Stack Developer - Lifelong learner"/>
+    <meta name="author" content="Madalin Popa">
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Full Stack Developer - Lifelong learner"/>
+    <meta property="og:description" content="Full Stack Developer - Lifelong learner"/>
+    <meta property="og:url" content="https://www.madalinpopa.com/"/>
+    <meta property="og:site_name" content="Madalin Popa"/>
+    <meta property="article:publisher" content="https://twiter.com/ppmadalin"/>
+    <script src="https://kit.fontawesome.com/2234045cef.js" crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://www.madalinpopa.com/"/>
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/favicon.ico' %}"/>
+    <!-- Load CSS -->
+    {% block stylesheet %}
+        <link type="text/css" href="{% static 'main/css/main.css' %}" rel="stylesheet">
+    {% endblock stylesheet %}
+    <title>{% block title %}Full Stack Developer - Lifelong learner{% endblock %}</title>
 
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  {% include "layouts/navbar.html" %}
+<!-- Navbar -->
+{% include "layouts/navbar.html" %}
 
-  <!-- Main Content -->
-  <main role="main">
+<!-- Main Content -->
+<main role="main">
     <div class="container">
-      <div class="main__content">
-        {% block content %} {% endblock content %}
-        <!-- Sidebar -->
-        {% include "layouts/sidebar.html" %}
-      </div>
+        <div class="main__content">
+            {% block content %} {% endblock content %}
+            <!-- Sidebar -->
+            {% include "layouts/sidebar.html" %}
+        </div>
     </div>
-  </main>
-  <!-- Footer -->
-  {% include "layouts/footer.html" %}
+</main>
+<!-- Footer -->
+{% include "layouts/footer.html" %}
 
 </body>
 

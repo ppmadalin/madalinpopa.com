@@ -11,6 +11,7 @@ django = "*"
 django-taggit = "*"
 mysqlclient = "*"
 python-dotenv = "*"
+markdown = "*"
 
 [requires]
 python_version = "3.8"
