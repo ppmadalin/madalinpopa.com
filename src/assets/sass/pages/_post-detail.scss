@@ -1,7 +1,10 @@
 .post {
   &__content {
     margin-bottom: 5rem;
-    text-indent: 2rem;
+
+    p:first-of-type {
+      text-indent: 2rem;
+    }
   }
 
   &__date {

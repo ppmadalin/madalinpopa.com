@@ -228,8 +228,9 @@ a {
     display: inline; }
 
 .post__content {
-  margin-bottom: 5rem;
-  text-indent: 2rem; }
+  margin-bottom: 5rem; }
+  .post__content p:first-of-type {
+    text-indent: 2rem; }
 
 .post__date {
   font-size: 0.8em;
