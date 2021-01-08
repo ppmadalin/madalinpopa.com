@@ -10,7 +10,7 @@
             <h1 class="post-entry__title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
 
             <div class="post-entry__content">
-                {{ post.body|markdown|truncatewords_html:50 }}
+                {{ post.body|markdown|truncatewords_html:75 }}
                 <a href="{{ post.get_absolute_url }}" class="post-entry__read-more">Read More</a>
             </div>
             <div class="post-entry__footer">
