@@ -25,7 +25,16 @@
             </div>
         </article>
     {% endfor %}
-    {{ page.number }}
-    <!-- Pagination -->
-    {% include "layouts/pagination.html" with page=posts %}
+    <div class="blog-posts__footer">
+        <div class="blog-posts__social">
+            <!-- Social -->
+            {% include "includes/svg-icons.html" %}
+        </div>
+        <div class="blog-posts__pagination">
+            <!-- Pagination -->
+            {% include "layouts/pagination.html" with page=posts %}
+        </div>
+
+    </div>
+
 </div>
