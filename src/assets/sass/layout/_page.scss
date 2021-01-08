@@ -5,4 +5,11 @@
   &__title {
     margin-bottom: 1rem;
   }
+
+  &__social {
+    margin-top: 1rem;
+    a:not(:last-of-type){
+      margin-right: 1rem;
+    }
+  }
 }
