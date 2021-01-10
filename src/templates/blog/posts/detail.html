@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load blog_tags %}
-{% block title %}{{ post.title }}{% endblock title %}
+{% block description %}
+    <meta name="description" content="{{ post.description }}"/>
+{% endblock description %}
+{% block title %}Madalin Popa - {{ post.title }}{% endblock title %}
 {% block content %}
     <article class="post">
 

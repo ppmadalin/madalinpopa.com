@@ -9,20 +9,19 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name=”robots” content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="description" content="Greetings! My name is Madalin. I am interested in computers and technology in general.
-    I live in Bucharest, the capital of Romania, the place where I was born.
-I had my first computer when I was 12 years old. Soon, at the age of 14, I created the first local computer network. Two years later I had my first job. I worked as a network support engineer. There I first discovered Linux, which I have been hooked on ever since. I installed and tested all Linux distributions available at the time.
-It used to be some sort of a sport for me to install and customize a new Linux distribution every week.
-With Linux, I discovered bash scripting and that's how I got to programming and the magic things you can do with a 20-line script."/>
+    {% block description %}
+        <meta name="description" content="Greetings! My name is Madalin. I am interested in computers and technology in general.
+    I live in Bucharest, the capital of Romania, the place where I was born."/>
+    {% endblock description %}
     <meta name="author" content="Madalin Popa">
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="Full Stack Developer - Lifelong learner"/>
-    <meta property="og:description" content="Full Stack Developer - Lifelong learner"/>
+    <meta property="og:description" content="Greetings! My name is Madalin. I am interested in computers and technology in general.
+    I live in Bucharest, the capital of Romania, the place where I was born."/>
     <meta property="og:url" content="https://www.madalinpopa.com/"/>
     <meta property="og:site_name" content="Madalin Popa"/>
     <meta property="article:publisher" content="https://twiter.com/ppmadalin"/>
-    <script src="https://kit.fontawesome.com/2234045cef.js" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://www.madalinpopa.com/"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'main/favicon.ico' %}"/>
     <!-- Load CSS -->
@@ -44,7 +43,7 @@ With Linux, I discovered bash scripting and that's how I got to programming and 
         <div class="main__content">
             {% block content %} {% endblock content %}
             <!-- Sidebar -->
-{#            {% include "layouts/sidebar.html" %}#}
+            {#            {% include "layouts/sidebar.html" %}#}
         </div>
     </div>
 </main>
