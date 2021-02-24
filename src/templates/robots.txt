@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /admin/
-Allow: /admin/login/
-Sitemap: https://www.madalinpopa.com/sitemap.xml
