@@ -55,8 +55,22 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 call plug#end()
 ```
+Next step is to load this file in the main configuration file `init.vim`
+```bash
+# Open the Neovim and add the following command
+:e $MYVIMRC
 
-**Step 4: Install additional tools used by the plugins
+# Add below text to the content
+source $HOME/.config/nvim/vim-plug/plugins.vim
+
+# Reload your configuration
+:source $MYVIMRC
+
+# Test plugin manager
+:PlugStatus
+```
+
+**Step 4: Install additional tools used by the plugins**
 
 Some plugins that you will install request to have installed some tools in order to work properly. These are optional but is good to have them. 
 Assuming that you have Python and Node.js installed, with the below commands you can install the mentioned tools.
