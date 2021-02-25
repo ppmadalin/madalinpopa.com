@@ -35,6 +35,29 @@ To enhance your experience with Neovim you will need to install some plugins, an
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ```
+**Step 4: Add the plugin manager to your config file. 
+
+```bash
+
+# Create the folder
+mkdir $HOME\.config\nvim\vim-plug\
+
+# Create the plugins configuration file
+New-Item -Path '$HOME\.config\nvim\vim-plug\plugins.vim' -ItemType File
+
+# Edit the newly created file. 
+nvim $HOME\.config\nvim\vim-plug\plugins.vim
+```
+
+Add the below text to plugins.vim
+```bash
+call plug#begin('~/.local/share/nvim/plugged')
+
+" Plugins to be added
+
+call plug#end()
+```
+
 **Step 4: Install additional tools used by the plugins
 
 Some plugins that you will install request to have installed some tools in order to work properly. These are optional but is good to have them. 
@@ -45,6 +68,8 @@ npm install -g neovim
 ```
 
 
+At this point you should have Noevim installed and configured with a plugin manager which you will use to install different plugins which will help you in 
+your daily use of Neovim. 
 
 
 
