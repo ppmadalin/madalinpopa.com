@@ -53,8 +53,6 @@ Add the below text to plugins.vim
 ```bash
 call plug#begin('~/.local/share/nvim/plugged')
 
-" Plugins to be added
-
 call plug#end()
 ```
 
