@@ -16,7 +16,7 @@ More details regarding Neovim can be found at https://neovim.io. Below I will en
 
 **Step 1: Install Neovim using chocolatey**
 
-To install Neovim, I am using Chocolatey which is a great package manager for windows. 
+To install Neovim, I am using Chocolatey which is a great package manager for windows. Below I install the development release of Neovim. 
 
 ```bash
 choco install neovim --pre
