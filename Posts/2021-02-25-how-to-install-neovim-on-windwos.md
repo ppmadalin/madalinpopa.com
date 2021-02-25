@@ -1,6 +1,6 @@
 ---
 Author: Madalin Popa
-Title: How to install and configure neovim on windwos
+Title: How to Install Neovim on Windwos
 Tags: neovim
 Date: 2021-02-25
 ---
@@ -35,7 +35,7 @@ To enhance your experience with Neovim you will need to install some plugins, an
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 ```
-**Step 4: Add the plugin manager to your config file. 
+**Step 4: Add the plugin manager to your config file** 
 
 ```bash
 
@@ -70,7 +70,7 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 :PlugStatus
 ```
 
-**Step 4: Install additional tools used by the plugins**
+**Step 5: Install additional tools used by the plugins**
 
 Some plugins that you will install request to have installed some tools in order to work properly. These are optional but is good to have them. 
 Assuming that you have Python and Node.js installed, with the below commands you can install the mentioned tools.
